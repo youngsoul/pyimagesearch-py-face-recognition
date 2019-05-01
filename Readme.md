@@ -8,7 +8,7 @@ Be prepared for many hours of compiling on the Raspberry Pi.
 
 Setting up the necessary software on the Raspberry Pi took a very long time.  Hours.. many hours.
 
-What I did was installed Python 3.6.6, OpenCV 4.0.1, dlib, face_recognition, various required Python modules.
+What I did was installed Python 3.6.6, OpenCV 4.0.1, dlib, face_recognition, numpy, scipy, scikit-image, various required Python modules.
 
 ### Raspbian Stretch Desktop
 
@@ -115,7 +115,7 @@ sudo pip3.6 install numpy
 # took so long I gave up
 # sudo pip3.6 install scipy
 
-cd ~/opencv-4.0.1/
+cd ~/opencv/
 mkdir build
 cd build
 
@@ -135,7 +135,7 @@ sudo make install
 sudo ldconfig
 sudo apt-get update
 
-cd ~/opencv-4.0.1/build/lib/python3
+cd ~/opencv/build/lib/python3
 mkdir ~/cv2lib
 cp cv2.cpython-35m-arm-linux-gnueabihf.so ~/cv2lib
 ln -s ~/cv2lib/cv2.cpython-36m-arm-linux-gnueabihf.so cv2_env/lib/python3.6/site-packages/cv2.so
