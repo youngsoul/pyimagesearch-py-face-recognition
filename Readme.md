@@ -232,3 +232,16 @@ as I have done to 0.46 ( default value is 0.6 ) if you are finding too many fals
 
 Good luck - its a super fun project once you get it running.
 
+## Download to RaspberryPI
+
+You will need to download the following files to the raspberry pi
+
+- haarcascade_frontalface_default.xml
+
+- pi_face_recognition.py
+
+- pr_encodings.pkl
+
+- pi_run.sh
+
+

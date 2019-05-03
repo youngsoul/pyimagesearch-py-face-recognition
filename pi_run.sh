@@ -1,0 +1,1 @@
+python pi_face_recognition.py --cascade haarcascade_frontalface_default.xml --encodings pr_encodings.pkl

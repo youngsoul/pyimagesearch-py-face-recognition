@@ -10,6 +10,8 @@ import imutils
 import pickle
 import time
 import cv2
+import platform
+
 
 # construct the argument parser and parse the arguments
 ap = argparse.ArgumentParser()
@@ -27,8 +29,12 @@ detector = cv2.CascadeClassifier(args["cascade"])
 
 # initialize the video stream and allow the camera sensor to warm up
 print("[INFO] starting video stream...")
-vs = VideoStream(src=0).start()
-# vs = VideoStream(usePiCamera=True).start()
+# if on raspberry pi use the pi camera
+if platform.system() == 'Linux':
+	vs = VideoStream(usePiCamera=True).start()
+else:
+	vs = VideoStream(src=0).start()
+
 time.sleep(2.0)
 
 # start the FPS counter
