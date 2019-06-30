@@ -10,9 +10,6 @@ sudo apt-get -y install htop
 # run screen command to put window in background
 # -------------------
 
-# update /etc/dphys-swapfile to increase size
-# set CONF_SWAPSIZE=100
-# set CONF_SWAPSIZE=2048
 # -i update the file
 # substitute string1 for string2 globally
 sudo sed -i 's/CONF_SWAPSIZE=100/CONF_SWAPSIZE=2048/g' /etc/dphys-swapfile
@@ -22,9 +19,6 @@ sudo /etc/init.d/dphys-swapfile start
 
 free -m
 
-# set GPU mem to 128
-# sudo echo "gpu_mem=128" >> /boot/config.txt
-# sudo nano /boot/config.txt
 # -i update the file
 # $ regex for end of the file
 # a append
