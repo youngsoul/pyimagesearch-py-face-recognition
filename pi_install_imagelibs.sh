@@ -23,6 +23,15 @@ pip install scikit-image
 pip install dlib
 pip install face_recognition
 
+pip install imutils
+pip install picamera
+
+# if you are building on buster python 3.7
+# and you want zmq you need to install cython
+# not sure why it was not already there
+pip install cython
+pip install zmq
+
 sudo sed -i 's/CONF_SWAPSIZE=1024/CONF_SWAPSIZE=100/g' /etc/dphys-swapfile
 
 sudo /etc/init.d/dphys-swapfile stop
